@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // 解决API跨域问题
-const allowedOrigins = ['http://127.0.0.1:3000','http://127.0.0.1:5173', 'http://127.0.0.1:3001', 'https://s.qcqx.cn', 'http://s.qcqx.cn', undefined];
+const allowedOrigins = ['http://127.0.0.1:3000','http://127.0.0.1:5173', 'http://127.0.0.1:3001', 'https://share.shangskr.top', 'https://share.shangskr.top'];
 app.all("/*", function (req, res, next) {
   if (allowedOrigins.includes(req.headers.origin)) {
     res.header('Access-Control-Allow-Origin', req.headers.origin);
